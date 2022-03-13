@@ -6,7 +6,7 @@ import classes from './QuoteList.module.css';
 
 
 const sortingQuotes = (quotes, accesding) => {
-  return quotes.sort((qA, qB) => {
+  return quotes?.sort((qA, qB) => {
     if (accesding) {
       return qA.id > qB.id ? 1 : -1
     } else {
@@ -30,7 +30,7 @@ const QuoteList = (props) => {
         <button onClick={quotesSortingHandeler}>Sort by {sortingState ? "Decending" : "Assending"}</button>
       </div>
       <ul className={classes.list}>
-        {sortedQuotes.map((quote) => (
+        {sortedQuotes?.map((quote) => (
           <QuoteItem
             key={quote.id}
             id={quote.id}

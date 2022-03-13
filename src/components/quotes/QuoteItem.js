@@ -1,5 +1,5 @@
 import classes from './QuoteItem.module.css';
-import { Link, useParams, useRouteMatch } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 const QuoteItem = (props) => {
   const match = useRouteMatch();
   return (
